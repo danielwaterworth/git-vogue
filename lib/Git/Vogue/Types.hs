@@ -25,6 +25,7 @@ data VogueOptions = Options
     { optSearch  :: SearchMode
     , optCommand :: VogueCommand
     , optVCS     :: VCSType
+    , optDisable :: [PluginName]
     }
   deriving (Eq, Show)
 
