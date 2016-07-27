@@ -24,7 +24,11 @@ import qualified Data.Text.Lazy as T
 data VogueOptions = Options
     { optSearch  :: SearchMode
     , optCommand :: VogueCommand
+    , optVCS     :: VCSType
     }
+  deriving (Eq, Show)
+
+data VCSType = Git | Null
   deriving (Eq, Show)
 
 -- | Commands, with parameters, to be executed.
