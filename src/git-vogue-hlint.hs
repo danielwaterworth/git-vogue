@@ -49,7 +49,7 @@ main =
 
             (flags, classify, hint) <- autoSettings'
             -- Cpphs is off by default
-            let flags' = flags { cppFlags = Cpphs defaultCpphsOptions }
+            let flags' = flags { cppFlags = Cpphs defaultCpphsOptions { defines = [("HLINT", "")] } }
 
 
             parsed <- for hss $ \file ->
